@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+/* CONTATOS */
+.container {
+    display: flex;
+    width: 100%;
+    text-align: start;
+    padding: 20px; /* Adiciona padding inicial */
+    max-width: 1200px; /* Limita a largura total */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    margin-bottom: 20px;
+    margin-top: 140px; /* Espaço suficiente para compensar a altura do cabeçalho */
+}
+
+.sidebar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px;
+    width: 100%; /* Usar largura total desde o início */
+    max-width: 800px; /* Limita a largura */
+    gap: 20px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px var(--preto-hover);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+
+.sidebar:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px var(--preto-hover);
+}
+
+.contato-imagem,
+.tecnologias-imagem{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.contato-espaco {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.6;
+    margin-left: 10px;
+}
+
+.contato h2 {
+    font-size: 1.2em;
+    color: var(--azul-claro);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--verde-escuro);
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.contato p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--cinza-texto);
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.cursos a {
+    color: var(--azul-escuro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo-cursos {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Garante padding suficiente nas laterais */
+        max-width: 100%;
+    }  
+    .sidebar {
+        width: 100%; /* Largura total para telas pequenas */
+        margin-bottom: 20px;
+        padding: 20px; /* Reduz o padding em telas menores */
+        max-width: 100%;
+    }  
+    .contato-imagem {
+        width: 18px; /* Reduz o tamanho das imagens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Reduz o padding em telas muito pequenas */
+        max-width: 100%;
+    }
+    .contato h2 {
+        font-size: 1.1em; /* Reduz um pouco o tamanho dos títulos */
+    }
+    .contato p {
+        font-size: 0.9em; /* Reduz um pouco o tamanho do texto */
+    }
+    .sidebar {
+        padding: 15px; /* Reduz o padding para telas pequenas */
+        max-width: 100%;
+    }  
+    .contato-imagem {
+        width: 16px; /* Reduz o tamanho das imagens ainda mais */
+    }
+}

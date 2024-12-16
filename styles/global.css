@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --cor-preto:#000000;
+    --cinza-texto: #333;
+    --cinza-hover:#555;
+    --azul-claro:#0077b5;
+    --azul-escuro: #154580; 
+    --azul-medio: #eaf2fd;
+    --branco-white:#fff;
+    --cinza-bemclaro:#ddd;
+    --laraja-html:orange;
+    --azul-css:#007bff;
+    --amarelo-javascript:yellow;
+    --azul-react:#61dafb;
+    --preto-rgb:rgba(0, 0, 0, 0.1);
+    --preto-hover:rgba(0, 0, 0, 0.2);
+    --verde-escuro:#6A9C89;
+    --verde-medio:#C4DAD2;
+    --verde-claro:#E9EFEC;
+}
+
+body, html{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: var(--branco-white);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: center;  
+}
+
+/* Menu de navegação */
+.cabecalho__container {
+    height: 88px;
+    width: 100%; /* Ocupa toda a largura */
+    position: fixed; /* Fixa o cabeçalho */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Alinha à esquerda */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--verde-escuro);
+    color: var(--branco-white);
+    font-weight: 700;
+    padding:  20px; /* Espaçamento interno */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+.cabecalho__logo-titulo {
+    display: flex;
+    align-items: center;   
+}
+
+.cabecalho__logo {
+    width: 5vw; /* Usando largura relativa */
+    height: 5vw; /* Usando altura relativa */
+    max-width: 40px; /* Garantir que a logo não ultrapasse o tamanho máximo */
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.cabecalho__titulo {
+    font-size: 1.5rem;   
+}
+
+.cabecalho__titulo:hover,
+.navegacao__elemento:hover {
+    color:var(--cor-preto);
+}
+
+.navegacao__lista {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;
+    margin-right: 20px; 
+    font-size: 1rem;     
+    padding: 40px;
+}
+
+
+/* Rodapé */
+.footer{  
+    text-align: center;
+    padding: 20px;
+    background-color: var(--verde-escuro);
+    color: var(--branco-white);
+    font-size: 0.9em;
+}
+
+.footer-links{
+    margin: 15px 0;
+}
+
+.footer-links a{
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-links img{
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-links a:hover img{
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .navegacao__lista {
+        flex-direction: column;      
+        padding: 20px;
+        gap: 20px;
+        font-size: 1rem;    
+    }
+    .navegacao__hamburguer {
+        display: flex; /* Mostra o ícone de hambúrguer */
+        
+    }
+    .navegacao__lista.active {
+        display: flex; /* Exibe o menu quando ativado */     
+    }
+}
+
+
+
+
+
+
