@@ -1,10 +1,12 @@
- /* MEUS PROJETOS  */
+* {
+    box-sizing: border-box;
+}
+/* MEUS PROJETOS  */
 .projetos__titulo{
   font-size: 2em;
   font-weight: bold;
   margin-top: 200px; /* Espaço suficiente para compensar a altura do cabeçalho */
-  text-align: center;
-  
+  text-align: center;  
 }
 
 .grid-container {

@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+/* MEUS TESTES */
+.projetos__titulo {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 200px;
+  text-align: center;
+}
+
+/* GRID */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+  padding: 15px;
+  margin-bottom: 70px;
+}
+
+/* CARD */
+.card {
+  background-color: var(--branco-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--preto-hover);
+  position: relative;
+}
+
+.projeto-video {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  display: none;
+  margin: auto;
+  z-index: 1;
+}
+
+.card:hover .projeto-video {
+  display: block; 
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+/* TEXTO */
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.5em;
+}
+
+.card p {
+  font-size: 1em;
+  color: var(--cinza-texto);
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  color: var(--branco-white);
+  background-color: var(--verde-escuro);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* TECNOLOGIAS */
+.tech-icons {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-icons span {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+.html {
+  background-color: var(--laraja-html);
+}
+
+.css {
+  background-color: var(--azul-css);
+  color: var(--branco-white);
+}
+
+.javascript {
+  background-color: var(--amarelo-javascript);
+  color: var(--cor-preto);
+}
+
+.react {
+  background-color: var(--azul-react);
+  color: var(--cor-preto);
+}
+
+/* RESPONSIVIDADE */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .projetos__titulo {
+    font-size: 1.8em;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .projeto-video {
+    height: 160px;
+  }
+
+  .card h3 {
+    font-size: 1.3em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 498px) {
+  .projetos__titulo {
+    font-size: 1.5em;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .projeto-video {
+    height: 140px;
+  }
+
+  .card h3 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.85em;
+  }
+
+  .btn {
+    padding: 7px 12px;
+    font-size: 0.85em;
+  }
+}

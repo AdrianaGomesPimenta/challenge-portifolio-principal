@@ -1,0 +1,22 @@
+main {
+  min-height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qa-placeholder {
+  text-align: center;
+  max-width: 600px;
+  
+}
+
+.qa-placeholder h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+.qa-placeholder p {
+  font-size: 1.2em;
+  color: #555;
+}
